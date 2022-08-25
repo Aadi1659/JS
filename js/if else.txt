@@ -1,0 +1,47 @@
+if else are conditonal operators
+
+=== for equality
+!== 
+>
+<
+>=
+<=
+
+now the difference between === and == is that === also checks the matching data type, but == doesnt.
+eg 1 == "1" will yield yes but 1 === "1" will yield no due to dissimilar data types.
+
+comparitive operators are
+&& and
+|| or
+! not
+
+eg:
+a function to check LEAP YEARS
+solution:
+function isLeap(year) {
+    
+   
+    
+      
+    if (year%4===0){
+        if (year%100 === 0){
+            if (year%400===0){
+                return "Leap year."
+            }
+            else {
+                return "Not leap year."
+            }
+        }
+        else{
+            return "Leap year."
+        }
+    }
+    else {
+        return "Not leap year."
+    }
+
+    
+
+ 
+
+}

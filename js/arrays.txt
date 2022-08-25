@@ -1,0 +1,14 @@
+in arrays in JS, we can use .includes to see whether one element is present inside the arrray or not.
+
+eg:
+write a JS code to welcome people based on their names in the list, if not, write sorry.
+
+code:
+var friends = ["aditya","akshat","abhay","aniket"];
+var myName = prompt("enter your name");
+if (friends.includes(myName)==1){
+    console.log("Welcome!");
+}
+else {
+    console.log("Sorry!");
+} 

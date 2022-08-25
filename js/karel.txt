@@ -1,0 +1,35 @@
+Karel is an educational programming language for beginners, created by Richard E. Pattis in his book Karel The Robot: A Gentle Introduction to the Art of Programming.
+
+write a JS code to get karel diagonal across a 5x5 board and put beepers on the way.
+
+solution:
+/**
+ * Welcome to the Stanford Karel IDE.
+ * This is a free space for you to 
+ * write any Karel program you want.
+ **/
+function main(){
+   //your code here
+   putBeeper();
+   myBeeper4times();
+   
+}
+
+function myBeeper(){
+      move();
+      turnLeft();
+      move();
+      turnRight();
+      putBeeper();
+   }
+
+function myBeeper4times(){
+      myBeeper();
+      myBeeper();
+      myBeeper();
+      myBeeper();
+   }
+
+
+
+verify in karel ide.

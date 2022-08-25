@@ -1,0 +1,9 @@
+here we will be using some arithmetic operators to calculate age of our dog in human years
+
+the general formula is : 
+humanAge = (dogAge - 2)x4 + 21
+solution:
+var dogAge = prompt("Enter the age of your dog");
+var humanAge = (dogAge-2)*4 + 21;
+alert("The dog age "+ dogAge +" in human years is "+humanAge);
+

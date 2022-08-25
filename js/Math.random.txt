@@ -1,0 +1,14 @@
+Math.random() is used to generate random numbers between 0 to 0.9999999999999999
+thats 16 9's after the decimal.
+
+eg: create a random score generator 
+
+var firstPerson = prompt("enter your name");
+var secondPerson = prompt("enter the other name");
+
+function calculator(){
+    var randomNumber = Math.random();
+    randomNumber = randomNumber * 100;
+    return Math.floor(randomNumber + 1);
+}
+alert("The percentage is "+calculator()+" %");

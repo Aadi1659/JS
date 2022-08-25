@@ -1,0 +1,109 @@
+Just like inline CSS here we can use inline JS.
+Here is an example:
+
+<body onload="alert('Hello')">
+
+Onload means on loading the site what should be alerted as an message. Inside the onload tag, our JS code goes.
+Its not recommended as it can be very complicated and clumsy looking.
+
+Now we look at implementing JS as an internal script. Its just like the CSS one.
+Here is an example:
+
+<script type="text/javascript">
+    alert("Hello");
+</script>
+
+This will be inside the body tag.
+
+External JS is done just like the External CSS.
+We use a script tag and write the code inside the JS file just like we used to do in styles.CSS
+
+Its very important to know where we are placing our JS Script tag, as the browser will load up line by line.
+The CSS tag shld be in the head tag as it needs to be loaded first but not always the case for JS tags.
+Suppose a H2 tag is there but we declare the script earlier than its declaration that is in its head tag, we will then get an error of 
+
+
+DOM: Document Object Manipualtion
+In this method we can select any object inside the html document and change it according to our needs.
+for example we needed the h1 tag in the html document, what we can do is 
+
+var head = document.firstElementChild.lastElementChild.firstElementChild ie stored the h1 in a variable.
+head.innerHTML("Good Bye");
+
+and then we changed the innerHTML to Good Bye.
+suppose to change the text color, we can write:
+head.style.color = "red"
+
+now suppose we have a check box in our page and we want to keep it checked by default, what we can do is
+document.querySelector("input").click();
+
+that means from the document we select all those elements which have the purpose of taking input and select them as clicked by default.
+Since on click, a checkbox becomes checked, we find it to be checked.
+
+getElementsByTagName("")
+
+document.getElementsByTagName("li") is an ARRAY which will select the array of tag li ie all the list elements.
+now its an array, so to change its property what we do is document.getElementsByTagName("li")[0].style.color = "red";
+to make the first item of li to be red.
+Its an array so any operation done with arrays is applicable to it.
+
+getElementsByClassName("")
+
+same as getElementsByTagName: returns an array but this function takes a particular class name as different elements can have same tags.
+
+getElementById("")
+
+returns a single element as an id is unique to a particular element in a HTML file
+
+querySelector("")
+
+this uses the selectors in the CSS file.
+selectors are those tags written just before the curly braces
+eg body, .title , #heading etc
+
+hiearchial selection:
+suppose there is a list item li and inside it we have an anchor a tag which we want to select.
+what we can do is 
+document.querySelector("li a"); which says go to li and take the a tag from it
+
+dot selectors
+suppose our list item li has a class of item and we want to select it.
+what we can do is:
+document.querySelector("li.item") --> this means select the item class from li .    
+
+Now what if our selectors matches more than one object?
+it will then select the first element only and leave the rest.
+
+to select all as an array, we can use the querySelectorAll("") tag which is an array.
+
+NOTE:
+All the fucntions like background-color, font-size used in CSS can be used in DOM also but only in camel cases
+eg: backgroundColor, fontSize etc
+
+also any value like the pixels 10rem or padding of 20% need to be specified in an quotation.
+
+using classList
+
+now its not a good practice to style our code in JS, its the work of CSS.
+to add a behavorial change in our website the other way, we can make use of classList.
+what it does is that it will .add .remove .toggle a particular class to a particular element or elements.
+that is useful as the CSS code for that new class will already be written in our CSS file, we just need to use the classList feature.
+
+document.querySelector("h1").classList.toggle("huge");
+suppose we want to add a class called huge to our h1 tag in toggle mode, ie as its called, it will turn on and off.
+
+NOTE:
+difference between innerHTML and textContent
+innerHTML literally brings up the entire HTML code inside the mentioned tag. We can add html through it also then.
+but textContent just brings up the text and doesnt bring up the HTML tags.
+document.querySelector("h1").innerHTML = "<em>Good Bye</em>" it will return a good bye but italisiced, using the em tag.
+
+
+using attributes
+
+attributes are the tags that go inside any HTML tag,
+eg: href in anchor tag is its attribute.
+
+to see the attributes we can do: document.querySelector("a").attributes;
+to get the attribute we can do: document.querySelector("a").getAttribute("href");
+to set it to something else we can do:  document.querySelector("a").setAttribute("href","https://www.bing.com");
